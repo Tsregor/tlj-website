@@ -9,9 +9,10 @@ A one-page portfolio: plain HTML, CSS and a small script. No build step and no d
 | `index.html` | All of the page content. Edit text here. |
 | `css/styles.css` | All styling. Colours and spacing are set at the top of the file. |
 | `js/main.js` | The slime button and the contact form. |
-| `assets/` | The five photos and the headshot PDF. |
+| `assets/` | The five photos, the headshot PDF and your own logo. |
+| `assets/logos/` | The company logos in the "worked with" scroller. |
 | `404.html` | The page shown for a wrong address. |
-| `favicon.svg` | The browser-tab icon. |
+| `favicon.png` | The browser-tab icon. |
 
 ## Editing the site
 
@@ -21,7 +22,7 @@ To swap a photo, upload a new file to `assets/` with the same file name as the o
 
 ## Turning on the contact form
 
-GitHub Pages cannot receive form submissions by itself, so the form is hidden until it has somewhere to send messages.
+GitHub Pages cannot receive form submissions by itself, so the form is hidden until it has somewhere to send messages. Until then the contact section shows the booking email and social links.
 
 1. Create a form at a form service that accepts a standard POST (Formspree is one) and copy the endpoint address it gives you.
 2. Open `js/main.js` and paste that address between the quotes on the `FORM_ENDPOINT` line.

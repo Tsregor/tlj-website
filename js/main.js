@@ -1,10 +1,10 @@
-/* Terrance Lamonte, Jr. portfolio: slime button and contact form. No dependencies. */
+/* Terrance Lamonte, Jr. portfolio: slime button, logo scroller and contact form. No dependencies. */
 
 /* CONTACT FORM
    GitHub Pages can't receive form submissions on its own. To switch the form on,
    create a form at a form service that accepts a standard POST (Formspree is one),
    then paste the endpoint address it gives you between the quotes below.
-   While this is empty, the form stays hidden and the page shows the social links only. */
+   While this is empty, the form stays hidden and the page shows the booking email and social links. */
 var FORM_ENDPOINT = '';
 
 (function () {
@@ -27,6 +27,19 @@ var FORM_ENDPOINT = '';
         slimeBtn.disabled = false;
         slimeTimer = null;
       }, SLIME_MS);
+    });
+  }
+
+  /* ---------- Logo scroller: pause / play ---------- */
+  var logos = document.getElementById('logos');
+  var logosToggle = document.getElementById('logos-toggle');
+
+  if (logos && logosToggle) {
+    logosToggle.hidden = false;
+    logosToggle.addEventListener('click', function () {
+      var paused = logos.classList.toggle('is-paused');
+      logosToggle.setAttribute('aria-pressed', String(paused));
+      logosToggle.textContent = paused ? 'Play' : 'Pause';
     });
   }
 

@@ -15,7 +15,8 @@
   <meta property="og:image" content="https://www.terrancelamontejr.me/assets/hero-portrait.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
   <link rel="preload" as="image" href="assets/hero-portrait.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,10 +45,11 @@
 
   <header class="nav">
     <div class="wrap nav__in">
-      <a class="nav__name" href="#top">Terrance Lamonte, Jr.</a>
+      <a class="nav__name" href="#top"><img class="nav__logo" src="assets/tlj-logo.png" width="240" height="214" alt="">Terrance Lamonte, Jr.</a>
       <nav class="nav__links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
         <a href="#words">Kind words</a>
         <a class="btn btn--solid" href="#contact">Book Terrance</a>
       </nav>
@@ -69,22 +71,70 @@
         </div>
       </div>
       <figure class="hero__fig">
-        <div class="ph"><img src="assets/hero-portrait.jpg" width="1200" height="1800" fetchpriority="high" alt="Black and white portrait of Terrance Lamonte, Jr. laughing, wearing an open button-up shirt over a white tee"></div>
+        <div class="ph"><img src="assets/hero-portrait.jpg" width="1200" height="1800" fetchpriority="high" alt="Portrait of Terrance Lamonte, Jr. laughing, wearing an open denim shirt over a white tee"></div>
         <figcaption>Photo: Nathalie Hennis</figcaption>
       </figure>
     </section>
 
-    <div class="strip">
-      <ul class="wrap strip__in" aria-label="Stages and screens">
-        <li class="eyebrow">Stages &amp; screens</li>
-        <li>The Second City</li>
-        <li>Boom Chicago</li>
-        <li>PBS-WTTW</li>
-        <li>WBUR Circle Round</li>
-        <li>DPW</li>
-        <li>TNW</li>
-      </ul>
-    </div>
+    <!-- Worked with: scrolling logos. The second list is a copy that makes the loop seamless. -->
+    <section class="logos" id="logos" aria-labelledby="logos-title">
+      <div class="wrap logos__head">
+        <h2 class="eyebrow" id="logos-title">[ worked with ]</h2>
+        <button type="button" class="logos__toggle" id="logos-toggle" aria-pressed="false" hidden>Pause</button>
+      </div>
+      <div class="logos__viewport">
+        <div class="logos__track">
+          <ul class="logos__set">
+          <li><img src="assets/logos/second-city.webp" alt="The Second City" width="163" height="37" style="--w:163px" decoding="async"></li>
+          <li><img src="assets/logos/nike.webp" alt="Nike" width="107" height="56" style="--w:107px" decoding="async"></li>
+          <li><img src="assets/logos/boom-chicago.webp" alt="Boom Chicago" width="109" height="55" style="--w:109px" decoding="async"></li>
+          <li><img src="assets/logos/salesforce.webp" alt="Salesforce" width="88" height="62" style="--w:88px" decoding="async"></li>
+          <li><img src="assets/logos/wttw.webp" alt="WTTW" width="62" height="62" style="--w:62px" decoding="async"></li>
+          <li><img src="assets/logos/aws.webp" alt="Amazon Web Services" width="100" height="60" style="--w:100px" decoding="async"></li>
+          <li><img src="assets/logos/io-theater.webp" alt="iO Theater" width="86" height="62" style="--w:86px" decoding="async"></li>
+          <li><img src="assets/logos/sap.webp" alt="SAP" width="110" height="55" style="--w:110px" decoding="async"></li>
+          <li><img src="assets/logos/nickelodeon.webp" alt="Nickelodeon" width="80" height="62" style="--w:80px" decoding="async"></li>
+          <li><img src="assets/logos/exness.webp" alt="Exness" width="220" height="27" style="--w:220px" decoding="async"></li>
+          <li><img src="assets/logos/comedysportz.webp" alt="ComedySportz" width="65" height="62" style="--w:65px" decoding="async"></li>
+          <li><img src="assets/logos/tommy-hilfiger.webp" alt="Tommy Hilfiger" width="220" height="12" style="--w:220px" decoding="async"></li>
+          <li><img src="assets/logos/annoyance-theatre.webp" alt="The Annoyance Theatre &amp; Bar" width="150" height="40" style="--w:150px" decoding="async"></li>
+          <li><img src="assets/logos/vice.webp" alt="VICE" width="138" height="44" style="--w:138px" decoding="async"></li>
+          <li><img src="assets/logos/casetify.webp" alt="Casetify" width="132" height="45" style="--w:132px" decoding="async"></li>
+          <li><img src="assets/logos/tnw.webp" alt="TNW" width="157" height="38" style="--w:157px" decoding="async"></li>
+          <li><img src="assets/logos/laugh-out-loud.webp" alt="Laugh Out Loud" width="62" height="62" style="--w:62px" decoding="async"></li>
+          <li><img src="assets/logos/omv.webp" alt="OMV" width="87" height="62" style="--w:87px" decoding="async"></li>
+          <li><img src="assets/logos/fairlife.webp" alt="Fairlife" width="66" height="62" style="--w:66px" decoding="async"></li>
+          <li><img src="assets/logos/stx.webp" alt="STX" width="146" height="41" style="--w:146px" decoding="async"></li>
+          <li><img src="assets/logos/humor-for-hope.webp" alt="Humor for Hope" width="119" height="50" style="--w:119px" decoding="async"></li>
+          <li><img src="assets/logos/nowplusone.webp" alt="NowPlusOne" width="54" height="62" style="--w:54px" decoding="async"></li>
+          </ul>
+          <ul class="logos__set" aria-hidden="true">
+          <li><img src="assets/logos/second-city.webp" alt="" width="163" height="37" style="--w:163px" decoding="async"></li>
+          <li><img src="assets/logos/nike.webp" alt="" width="107" height="56" style="--w:107px" decoding="async"></li>
+          <li><img src="assets/logos/boom-chicago.webp" alt="" width="109" height="55" style="--w:109px" decoding="async"></li>
+          <li><img src="assets/logos/salesforce.webp" alt="" width="88" height="62" style="--w:88px" decoding="async"></li>
+          <li><img src="assets/logos/wttw.webp" alt="" width="62" height="62" style="--w:62px" decoding="async"></li>
+          <li><img src="assets/logos/aws.webp" alt="" width="100" height="60" style="--w:100px" decoding="async"></li>
+          <li><img src="assets/logos/io-theater.webp" alt="" width="86" height="62" style="--w:86px" decoding="async"></li>
+          <li><img src="assets/logos/sap.webp" alt="" width="110" height="55" style="--w:110px" decoding="async"></li>
+          <li><img src="assets/logos/nickelodeon.webp" alt="" width="80" height="62" style="--w:80px" decoding="async"></li>
+          <li><img src="assets/logos/exness.webp" alt="" width="220" height="27" style="--w:220px" decoding="async"></li>
+          <li><img src="assets/logos/comedysportz.webp" alt="" width="65" height="62" style="--w:65px" decoding="async"></li>
+          <li><img src="assets/logos/tommy-hilfiger.webp" alt="" width="220" height="12" style="--w:220px" decoding="async"></li>
+          <li><img src="assets/logos/annoyance-theatre.webp" alt="" width="150" height="40" style="--w:150px" decoding="async"></li>
+          <li><img src="assets/logos/vice.webp" alt="" width="138" height="44" style="--w:138px" decoding="async"></li>
+          <li><img src="assets/logos/casetify.webp" alt="" width="132" height="45" style="--w:132px" decoding="async"></li>
+          <li><img src="assets/logos/tnw.webp" alt="" width="157" height="38" style="--w:157px" decoding="async"></li>
+          <li><img src="assets/logos/laugh-out-loud.webp" alt="" width="62" height="62" style="--w:62px" decoding="async"></li>
+          <li><img src="assets/logos/omv.webp" alt="" width="87" height="62" style="--w:87px" decoding="async"></li>
+          <li><img src="assets/logos/fairlife.webp" alt="" width="66" height="62" style="--w:66px" decoding="async"></li>
+          <li><img src="assets/logos/stx.webp" alt="" width="146" height="41" style="--w:146px" decoding="async"></li>
+          <li><img src="assets/logos/humor-for-hope.webp" alt="" width="119" height="50" style="--w:119px" decoding="async"></li>
+          <li><img src="assets/logos/nowplusone.webp" alt="" width="54" height="62" style="--w:54px" decoding="async"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <!-- About -->
     <section class="wrap about" id="about" aria-labelledby="about-title">
@@ -184,10 +234,25 @@
             <li><span class="credits__title">Boom Chicago</span><span class="credits__meta">Ensemble member / Amsterdam</span><span class="credits__link"><a class="tlink" href="https://alumni.boomchicago.nl/activities/terrance-lamonte-jr/" target="_blank" rel="noopener">Alumni page</a></span></li>
             <li><span class="credits__title">Circle Round: &ldquo;Giant Steps&rdquo; and &ldquo;Laughing and Crying&rdquo;</span><span class="credits__meta">Podcast / WBUR, recorded live at The Athenaeum Center, Chicago</span><span class="credits__link"><a class="tlink" href="https://www.wbur.org/podcasts/circleround" target="_blank" rel="noopener">Listen</a></span></li>
             <li><span class="credits__title">Interference: Dead Air</span><span class="credits__meta">Video game / Fear of Corn Productions</span><span class="credits__link"><a class="tlink" href="https://store.steampowered.com/app/1238450/Interference_Dead_Air/" target="_blank" rel="noopener">On Steam</a></span></li>
-            <li><span class="credits__title">Yippee Ki-Yay Merry Christmas: A Die Hard Musical Parody</span><span class="credits__meta">Theatre</span><span class="credits__link"></span></li>
+            <li><span class="credits__title">Yippee Ki-Yay Merry Christmas: A Die Hard Musical Parody</span><span class="credits__meta">Theatre</span><span class="credits__link"><a class="tlink" href="https://youtu.be/s3XqmDjyxec" target="_blank" rel="noopener">Watch</a></span></li>
             <li><span class="credits__title">Coke Zero, Casetify</span><span class="credits__meta">Commercial / produced in the Netherlands</span><span class="credits__link"></span></li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="wrap services" id="services" aria-labelledby="services-title">
+      <h2 class="eyebrow" id="services-title">[ services ]</h2>
+      <ul class="services__list">
+        <li><h3>Emcee &amp; hosting</h3><p>A prepared, high-energy host for conferences, keynotes, awards and live events.</p></li>
+        <li><h3>For artists</h3><p>Workshops and coaching to master improv, develop memorable sketches and find the fun in the unknown.</p></li>
+        <li><h3>For ensembles</h3><p>Targeted coaching that sharpens your group dynamics and unlocks your team&rsquo;s distinctive comedic voice.</p></li>
+        <li><h3>For corporate</h3><p>Tailored improv and comedy workshops that build trust, collaboration and your team&rsquo;s power of play.</p></li>
+      </ul>
+      <div class="services__cta">
+        <p>Available for in-person and virtual sessions. Contact me for more information and rates.</p>
+        <a class="btn btn--solid" href="#contact">Contact me</a>
       </div>
     </section>
 
@@ -218,16 +283,13 @@
         <p class="eyebrow">[ contact ]</p>
         <h2 class="h2" id="contact-title">Let&rsquo;s work together.</h2>
         <p>Casting a role, booking a host or planning a workshop for your team? Tell me a little about it and I&rsquo;ll be in touch.</p>
-        <ul class="socials" aria-label="Social links">
-          <li><a href="https://www.linkedin.com/in/terrance-rogers-jr-3b801424" target="_blank" rel="noopener">LinkedIn
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></li>
-          <li><a href="https://www.imdb.com/name/nm10834320/" target="_blank" rel="noopener">IMDb
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></li>
-          <li><a href="https://www.instagram.com/tsregor/" target="_blank" rel="noopener">Instagram
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></li>
-        </ul>
+        <div class="contact__email">
+          <p class="eyebrow">Booking inquiries</p>
+          <a href="mailto:email@terrancelamontejr.me">email@terrancelamontejr.me</a>
+        </div>
       </div>
 
+      <div class="contact__side">
       <!-- The form stays hidden until FORM_ENDPOINT is set in js/main.js (see README). -->
       <div class="contact__form" id="contact-form-wrap" hidden>
         <form class="form" id="contact-form" method="POST" novalidate>
@@ -265,6 +327,15 @@
           <h3>Message received.</h3>
           <p>Thanks for reaching out. I&rsquo;ll be in touch shortly.</p>
         </div>
+      </div>
+        <ul class="socials" aria-label="Social links">
+          <li><a href="https://www.linkedin.com/in/terrance-rogers-jr-3b801424" target="_blank" rel="noopener">LinkedIn
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.imdb.com/name/nm10834320/" target="_blank" rel="noopener">IMDb
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.instagram.com/tsregor/" target="_blank" rel="noopener">Instagram
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></li>
+        </ul>
       </div>
     </section>
   </main>
