@@ -1,4 +1,4 @@
-/* Terrance Lamonte, Jr. portfolio: slime button, logo scroller and contact form. No dependencies. */
+/* Terrance Lamonte, Jr. portfolio: slime button, logo scroller, photo viewer and contact form. No dependencies. */
 
 /* CONTACT FORM
    GitHub Pages can't receive form submissions on its own. To switch the form on,
@@ -40,6 +40,54 @@ var FORM_ENDPOINT = '';
       var paused = logos.classList.toggle('is-paused');
       logosToggle.setAttribute('aria-pressed', String(paused));
       logosToggle.textContent = paused ? 'Play' : 'Pause';
+    });
+  }
+
+  /* ---------- Gallery: full-screen photo viewer ---------- */
+  var box = document.getElementById('lightbox');
+  var boxImg = document.getElementById('lightbox-img');
+  var boxCap = document.getElementById('lightbox-cap');
+  var photos = Array.prototype.slice.call(document.querySelectorAll('.gallery__grid a'));
+  var current = 0;
+  var opener = null;
+
+  function showPhoto(index) {
+    current = (index + photos.length) % photos.length;
+    var link = photos[current];
+    var thumb = link.querySelector('img');
+    boxImg.src = link.getAttribute('href');
+    boxImg.alt = thumb ? thumb.alt : '';
+    boxCap.textContent = link.getAttribute('data-caption') || '';
+  }
+
+  // Without <dialog> support the links simply open the large photo.
+  if (box && boxImg && photos.length && typeof box.showModal === 'function') {
+    photos.forEach(function (link, index) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        opener = link;
+        showPhoto(index);
+        box.showModal();
+      });
+    });
+    box.addEventListener('click', function (event) {
+      var button = event.target.closest('[data-action]');
+      if (button) {
+        var action = button.getAttribute('data-action');
+        if (action === 'close') box.close();
+        if (action === 'prev') showPhoto(current - 1);
+        if (action === 'next') showPhoto(current + 1);
+      } else if (event.target === box) {
+        box.close(); // a click on the dark area around the photo
+      }
+    });
+    box.addEventListener('keydown', function (event) {
+      if (event.key === 'ArrowLeft') showPhoto(current - 1);
+      if (event.key === 'ArrowRight') showPhoto(current + 1);
+    });
+    box.addEventListener('close', function () {
+      boxImg.removeAttribute('src');
+      if (opener) opener.focus();
     });
   }
 

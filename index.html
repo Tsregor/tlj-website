@@ -47,8 +47,10 @@
     <div class="wrap nav__in">
       <a class="nav__name" href="#top"><img class="nav__logo" src="assets/tlj-logo.png" width="240" height="214" alt="">Terrance Lamonte, Jr.</a>
       <nav class="nav__links" aria-label="Primary">
+        <a href="#reel">Reel</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
         <a href="#services">Services</a>
         <a href="#words">Kind words</a>
         <a class="btn btn--solid" href="#contact">Book Terrance</a>
@@ -133,6 +135,18 @@
           <li><img src="assets/logos/nowplusone.webp" alt="" width="54" height="62" style="--w:54px" decoding="async"></li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <!-- Reel -->
+    <section class="reel" id="reel" aria-labelledby="reel-title">
+      <div class="wrap reel__in">
+        <h2 class="eyebrow" id="reel-title">[ reel ]</h2>
+        <video class="reel__video" controls playsinline preload="none" poster="assets/reel-poster.jpg" width="1920" height="1080">
+          <source src="assets/reel.mp4" type="video/mp4">
+          <a href="assets/reel.mp4">Download the reel (MP4)</a>
+        </video>
+        <p class="reel__meta">Acting reel / 2 min 48 sec</p>
       </div>
     </section>
 
@@ -241,6 +255,25 @@
       </div>
     </section>
 
+    <!-- Gallery: each link opens the large photo; js/main.js turns that into a full-screen viewer. -->
+    <section class="wrap gallery" id="gallery" aria-labelledby="gallery-title">
+      <h2 class="eyebrow" id="gallery-title">[ gallery ]</h2>
+      <ul class="gallery__grid">
+        <li class="is-wide"><a href="assets/gallery/dpw-new-york-crowd.jpg" data-caption="Emcee, DPW New York"><img src="assets/gallery/dpw-new-york-crowd-thumb.jpg" alt="Terrance on stage at DPW New York, seen from behind, facing a packed audience" width="1000" height="667" loading="lazy"></a></li>
+        <li class="is-tall"><a href="assets/gallery/dpw-amsterdam-stage.jpg" data-caption="Emcee, DPW Amsterdam"><img src="assets/gallery/dpw-amsterdam-stage-thumb.jpg" alt="Terrance mid-stride on the DPW Amsterdam stage in a varsity jacket, holding a tablet" width="667" height="1000" loading="lazy"></a></li>
+        <li><a href="assets/gallery/dpw-new-york-laugh.jpg" data-caption="Emcee, DPW New York"><img src="assets/gallery/dpw-new-york-laugh-thumb.jpg" alt="Terrance laughing backstage at DPW New York under an orange spotlight" width="1000" height="667" loading="lazy" style="--pos:42% 50%"></a></li>
+        <li class="is-tall"><a href="assets/gallery/workshop-action.jpg" data-caption="Leading a workshop"><img src="assets/gallery/workshop-action-thumb.jpg" alt="Terrance mid-move with one arm raised while leading a workshop" width="667" height="1000" loading="lazy"></a></li>
+        <li><a href="assets/gallery/exness-host.jpg" data-caption="Hosting for Exness"><img src="assets/gallery/exness-host-thumb.jpg" alt="Terrance pointing to the crowd on stage in a waistcoat, a bright screen behind him" width="1000" height="667" loading="lazy"></a></li>
+        <li class="is-tall"><a href="assets/gallery/on-the-mic.jpg" data-caption="On the mic"><img src="assets/gallery/on-the-mic-thumb.jpg" alt="Terrance speaking into a handheld microphone on a blue-lit stage" width="667" height="1000" loading="lazy"></a></li>
+        <li><a href="assets/gallery/dpw-amsterdam-wave.jpg" data-caption="Emcee, DPW Amsterdam"><img src="assets/gallery/dpw-amsterdam-wave-thumb.jpg" alt="Terrance throwing a peace sign to the audience at DPW Amsterdam" width="1000" height="667" loading="lazy" style="--pos:52% 50%"></a></li>
+        <li><a href="assets/gallery/second-city-scene.jpg" data-caption="The Second City, Chicago"><img src="assets/gallery/second-city-scene-thumb.jpg" alt="Terrance in a blue sweater in a scene with two castmates at The Second City" width="1000" height="667" loading="lazy" style="--pos:12% 50%"></a></li>
+        <li><a href="assets/gallery/boom-chicago-scene.jpg" data-caption="Boom Chicago, Amsterdam"><img src="assets/gallery/boom-chicago-scene-thumb.jpg" alt="Terrance in a scene with two other performers under purple stage light" width="1000" height="667" loading="lazy" style="--pos:92% 50%"></a></li>
+        <li><a href="assets/gallery/scene-high-five.jpg" data-caption="On stage"><img src="assets/gallery/scene-high-five-thumb.jpg" alt="Terrance and a scene partner mid high-five on a dark stage" width="1000" height="667" loading="lazy" style="--pos:62% 50%"></a></li>
+        <li><a href="assets/gallery/workshop-group.jpg" data-caption="Workshop group"><img src="assets/gallery/workshop-group-thumb.jpg" alt="Terrance taking a wide-eyed selfie with a laughing workshop group" width="1000" height="750" loading="lazy" style="--pos:60% 60%"></a></li>
+        <li><a href="assets/gallery/main-stage-stars.jpg" data-caption="On the main stage"><img src="assets/gallery/main-stage-stars-thumb.jpg" alt="Terrance on a large stage in front of a starry night-sky backdrop" width="1000" height="676" loading="lazy" style="--pos:14% 50%"></a></li>
+      </ul>
+    </section>
+
     <!-- Services -->
     <section class="wrap services" id="services" aria-labelledby="services-title">
       <h2 class="eyebrow" id="services-title">[ services ]</h2>
@@ -343,10 +376,27 @@
   <footer class="foot">
     <div class="wrap foot__in">
       <p class="foot__copy">&copy; 2026 Terrance Lamonte, Jr.</p>
-      <p class="foot__credit">Photography: Nathalie Hennis, TON Media</p>
+      <p class="foot__credit">Photography: Nathalie Hennis, TON Media, Wesley Verhoeve</p>
       <a class="tlink" href="#top">Back to top</a>
     </div>
   </footer>
+
+  <!-- Photo viewer for the gallery -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button type="button" class="lightbox__btn lightbox__close" data-action="close" aria-label="Close photo viewer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+    </button>
+    <button type="button" class="lightbox__btn lightbox__prev" data-action="prev" aria-label="Previous photo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <figure class="lightbox__fig">
+      <img id="lightbox-img" src="" alt="">
+      <figcaption id="lightbox-cap"></figcaption>
+    </figure>
+    <button type="button" class="lightbox__btn lightbox__next" data-action="next" aria-label="Next photo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </dialog>
 
   <!-- Slime -->
   <button type="button" class="tlj-slime-btn" id="slime-btn" hidden>

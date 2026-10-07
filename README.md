@@ -9,8 +9,10 @@ A one-page portfolio: plain HTML, CSS and a small script. No build step and no d
 | `index.html` | All of the page content. Edit text here. |
 | `css/styles.css` | All styling. Colours and spacing are set at the top of the file. |
 | `js/main.js` | The slime button and the contact form. |
-| `assets/` | The five photos, the headshot PDF and your own logo. |
+| `assets/` | The page photos, the headshot PDF and your own logo. |
 | `assets/logos/` | The company logos in the "worked with" scroller. |
+| `assets/gallery/` | Gallery photos. Each has a large version and a `-thumb` version for the grid. |
+| `assets/reel.mp4` | The acting reel, compressed for the web, and `reel-poster.jpg`, the still shown before it plays. |
 | `404.html` | The page shown for a wrong address. |
 | `favicon.png` | The browser-tab icon. |
 
