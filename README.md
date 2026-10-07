@@ -30,6 +30,10 @@ GitHub Pages cannot receive form submissions by itself, so the form is hidden un
 2. Open `js/main.js` and paste that address between the quotes on the `FORM_ENDPOINT` line.
 3. Commit the change. The form now appears next to the social links.
 
+## Visitor stats
+
+The last lines of `index.html` load GoatCounter, which counts visits without cookies. See the numbers at `https://tlj.goatcounter.com`. Delete that script tag to stop counting.
+
 ## Custom domain
 
 The site is written to live at `terrancelamontejr.me`. GitHub adds a `CNAME` file to this repository when the custom domain is saved in **Settings > Pages**; leave that file in place.
