@@ -30,4 +30,4 @@ GitHub Pages cannot receive form submissions by itself, so the form is hidden un
 
 ## Custom domain
 
-The site is written to live at `www.terrancelamontejr.me`. GitHub adds a `CNAME` file to this repository when the custom domain is saved in **Settings > Pages**; leave that file in place.
+The site is written to live at `terrancelamontejr.me`. GitHub adds a `CNAME` file to this repository when the custom domain is saved in **Settings > Pages**; leave that file in place.
