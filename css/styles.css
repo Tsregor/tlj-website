@@ -59,6 +59,7 @@ svg { flex: none; }
 .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 48px 72px; padding-top: clamp(40px, 6vw, 72px); padding-bottom: clamp(56px, 7vw, 88px); }
 .hero__text { flex: 1.25 1 420px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
 .hero__title { font-size: clamp(44px, 6.4vw, 88px); line-height: .98; font-weight: 800; letter-spacing: -.035em; }
+.hero__title span { display: block; text-wrap: balance; }
 .hero__bio { max-width: 34em; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.65; color: var(--body); }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
 .hero__fig { flex: 1 1 320px; min-width: 0; max-width: 480px; display: flex; flex-direction: column; gap: 10px; }
@@ -92,17 +93,13 @@ svg { flex: none; }
 .reel__in { display: flex; flex-direction: column; gap: 24px; padding-top: clamp(48px, 7vw, 88px); padding-bottom: clamp(48px, 7vw, 88px); }
 .reel .eyebrow { color: #bdbdbd; }
 .reel__video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
-.reel__meta { font-size: 14px; color: #bdbdbd; }
 
 /* ---------- 4. About ---------- */
 .about { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 48px 72px; padding-top: clamp(64px, 9vw, 112px); padding-bottom: clamp(64px, 9vw, 112px); }
 .about__side { flex: 1 1 300px; min-width: 0; max-width: 400px; display: flex; flex-direction: column; gap: 28px; }
 .about__side .ph { aspect-ratio: 3 / 4; }
 .about__side img { object-position: 30% 30%; }
-.facts > div { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 49px; padding: 8px 0; border-top: 1px solid var(--line); }
-.facts > div:last-child { border-bottom: 1px solid var(--line); }
-.facts dt { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.facts dd { font-size: 15px; font-weight: 600; text-align: right; }
+.about__doc { align-self: flex-start; }
 .about__main { flex: 2 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 48px; }
 .stack { display: flex; flex-direction: column; gap: 20px; }
 .about__bio { margin-top: 8px; font-size: 18px; line-height: 1.7; color: var(--body); }
