@@ -393,26 +393,12 @@
     </button>
   </dialog>
 
-  <!-- Slime -->
-  <button type="button" class="tlj-slime-btn" id="slime-btn" hidden>
-    <svg width="18" height="22" viewBox="0 0 18 22" aria-hidden="true"><path d="M9 1C9 1 2 9.2 2 14a7 7 0 0 0 14 0C16 9.2 9 1 9 1z" fill="#62d51f"/></svg>
-    Slime me
+  <!-- Surprise me: js/main.js picks a random 90s / early-00s pop-up each time -->
+  <button type="button" class="fx-btn" id="fx-btn" hidden>
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l2.6 7.9L22.5 12l-7.9 2.6L12 22.5l-2.6-7.9L1.5 12l7.9-2.6z" fill="#62d51f"/></svg>
+    Surprise me
   </button>
-  <div class="tlj-slime" id="slime" aria-hidden="true">
-    <i style="left:-2%;width:11%;animation-delay:.18s"></i>
-    <i style="left:7%;width:10%;animation-delay:.42s"></i>
-    <i style="left:15%;width:12%;animation-delay:.05s"></i>
-    <i style="left:25%;width:9%;animation-delay:.34s"></i>
-    <i style="left:32%;width:12%;animation-delay:.22s"></i>
-    <i style="left:42%;width:10%;animation-delay:.48s"></i>
-    <i style="left:50%;width:11%;animation-delay:.1s"></i>
-    <i style="left:59%;width:10%;animation-delay:.38s"></i>
-    <i style="left:67%;width:12%;animation-delay:0s"></i>
-    <i style="left:77%;width:9%;animation-delay:.28s"></i>
-    <i style="left:84%;width:11%;animation-delay:.45s"></i>
-    <i style="left:93%;width:10%;animation-delay:.15s"></i>
-    <b>Slimed!</b>
-  </div>
+  <div class="fx" id="fx" aria-hidden="true"></div>
 
   <script src="js/main.js" defer></script>
 

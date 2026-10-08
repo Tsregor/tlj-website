@@ -8,7 +8,7 @@ A one-page portfolio: plain HTML, CSS and a small script. No build step and no d
 | --- | --- |
 | `index.html` | All of the page content. Edit text here. |
 | `css/styles.css` | All styling. Colours and spacing are set at the top of the file. |
-| `js/main.js` | The slime button and the contact form. |
+| `js/main.js` | The Surprise me button (five random retro pop-ups), logo scroller, photo viewer and contact form. |
 | `assets/` | The page photos, the headshot and resume PDF and your own logo. |
 | `assets/logos/` | The company logos in the "worked with" scroller. |
 | `assets/gallery/` | Gallery photos. Each has a large version and a `-thumb` version for the grid. |
